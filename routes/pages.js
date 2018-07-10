@@ -14,6 +14,23 @@ router.get('/:pageHandle', function(req, res, next) {
 	}  
 });
 
+router.get('/', function(req, res, next) {	
+	let data = JSON.parse(fs.readFileSync('D://node/mconServer/public/data/pages.json','utf8'))
+	let output = {}
+	Object.keys(data).forEach(x=>{
+		if(x=='404')return
+		output[x] = {
+			'title': data[x].title,
+			'handle':data[x].handle
+		}
+	})
+	if(output){
+		res.send(output);
+	} else {
+		res.send(JSON.stringify(data['404']));
+	}  
+});
+
 router.post('/create-page',(req,res,next)=>{
 	let data = JSON.parse(fs.readFileSync('D://node/mconServer/public/data/pages.json','utf8'))
 	console.log(req.body)
