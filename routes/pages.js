@@ -36,7 +36,8 @@ router.post('/create-page',(req,res,next)=>{
 	console.log(req.body)
 	data[req.body.handle] = {...req.body}
 	fs.writeFileSync('D://node/mconServer/public/data/pages.json', JSON.stringify(data));
-	res.send('page created/updated')
+	//res.send('page created/updated')
+	res.send(200)
 })
 
 module.exports = router;

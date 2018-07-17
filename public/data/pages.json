@@ -1,17 +1,17 @@
 {
    "404":{
       "title":"Page Not Found",
-	  "handle":"404",
+      "handle":"404",
       "content":"If this was a page, this is where the content would be"
    },
    "about":{
       "title":"About Us",
-	  "handle":"about",
+      "handle":"about",
       "content":"This is the about us page boi"
    },
    "contact":{
       "title":"Contact Us",
-	  "handle":"contact",
+      "handle":"contact",
       "content":"<form><input type='text' name='name' placeholder='Your Name' /><br><br><input type='text' name='email' placeholder='Email' /><br><br><textarea name='message' rows='4' cols='50' maxlength='1000'></textarea><br><br><input type='submit' value='Submit'></form>"
    },
    "eggs-delish":{
